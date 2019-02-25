@@ -4,11 +4,75 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="pizar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <h1>Welcome to Pizar!</h1>
     <h2>Build your favorite pizza and we'll find you a movie!</h2>
-    <div class="button">Start!</div>
-    <button type="button" name="button">Start!</button>
+    <div id='start-btn' class="button">Start!</div>
+
+    <div id='question1' style="display: none">
+      <h1>1. Select your bread:</h1>
+      <img src="pics/bread1.jpg" id='next1-btn' style="width:200px;height:200px">
+      <img src="pics/bread2.jpg" style="width:200px;height:200px">
+      <img src="pics/bread3.jpg" style="width:200px;height:200px">
+      <img src="pics/bread4.jpg" style="width:200px;height:200px">
+      <!-- <div id='next1-btn' class="button">Next</div> -->
+    </div>
+
+    <div id='question2' style="display: none">
+      <h1>2. Select your sauce:</h1>
+      <img src="pics/sauce1.jpg" id='next2-btn' style="width:200px;height:200px">
+      <img src="pics/sauce2.jpg" id='next2-btn' style="width:200px;height:200px">
+      <img src="pics/sauce3.jpg" id='next2-btn' style="width:200px;height:200px">
+      <img src="pics/sauce4.jpg" id='next2-btn' style="width:200px;height:200px">
+      <!-- <div id='next2-btn' class="button">Next</div> -->
+    </div>
+
+    <div id='question3' style="display: none">
+      <h1>3. Select your toppings:</h1>
+      <img src="pics/toppings1.jpg" style="width:200px;height:200px">
+      <img src="pics/toppings2.jpg" style="width:200px;height:200px">
+      <img src="pics/toppings3.jpg" style="width:200px;height:200px">
+      <img src="pics/toppings4.jpg" style="width:200px;height:200px">
+      <div id='random-btn' class="button">Randomize!</div>
+    </div>
+
+    <div id='result' style="display: none">
+      <h1>We found these movies:</h1>
+    </div>
+
+    <script>
+    $(function(){
+      $("#start-btn").on("click", function(){
+        $("#question1").show();
+      })
+      $("#next1-btn").on("click", function(){
+        $("#question2").show();
+      })
+      $("#next2-btn").on("click", function(){
+        $("#question3").show();
+      })
+      $("#random-btn").on("click", function(){
+        $("#result").show();
+        // https://image.tmdb.org/t/p/w400/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg
+        fetch("https://api.themoviedb.org/3/discover/movie?api_key=a86fd5baa6696154f7d8e19d4c5d2689&with_genres=16&sort_by=popularity.desc")
+          .then(res => res.json())
+          .then(res => {
+            console.log(res);
+            var img1 = document.createElement("img");
+            img1.src = "https://image.tmdb.org/t/p/w300" + res.results[0].poster_path;
+            $("#result").append(img1)
+            var img2 = document.createElement("img");
+            img2.src = "https://image.tmdb.org/t/p/w300" + res.results[1].poster_path;
+            $("#result").append(img2)
+            var img3 = document.createElement("img");
+            img3.src = "https://image.tmdb.org/t/p/w300" + res.results[2].poster_path;
+            $("#result").append(img3)
+          })
+      })
+    })
+
+    </script>
   </body>
 </html>

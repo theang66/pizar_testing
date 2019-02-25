@@ -46,6 +46,7 @@
     $(function(){
       $("#start-btn").on("click", function(){
         $("#question1").show();
+        $("#start-btn").hide();
       })
       $("#next1-btn").on("click", function(){
         $("#question2").show();
@@ -69,6 +70,7 @@
             var img3 = document.createElement("img");
             img3.src = "https://image.tmdb.org/t/p/w300" + res.results[2].poster_path;
             $("#result").append(img3)
+        $("#random-btn").hide();
           })
       })
     })

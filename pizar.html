@@ -43,6 +43,8 @@
     </div>
 
     <script>
+    let genreID;
+
     $(function(){
       $("#start-btn").on("click", function(){
         $("#question1").show();
@@ -50,6 +52,7 @@
       })
       $(".bread").on("click", function(){
         $("#question2").show();
+        genreID = Math.round(10+Math.random()*20);
       })
       $(".sauce").on("click", function(){
         $("#question3").show();
@@ -59,8 +62,11 @@
       })
       $("#random-btn").on("click", function(){
         $("#result").show();
-        // https://image.tmdb.org/t/p/w400/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg
+        // Images: https://image.tmdb.org/t/p/w400/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg
         fetch("https://api.themoviedb.org/3/discover/movie?api_key=a86fd5baa6696154f7d8e19d4c5d2689&with_genres=18&sort_by=popularity.desc")
+        // let request = "https://api.themoviedb.org/3/discover/movie?api_key=a86fd5baa6696154f7d8e19d4c5d2689&with_genres="+genreID+"&sort_by=popularity.desc";
+        // console.log(request);
+        // fetch(request)
           .then(res => res.json())
           .then(res => {
             console.log(res);

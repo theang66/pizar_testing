@@ -13,30 +13,30 @@
 
     <div id='question1' style="display: none">
       <h1>1. Select your bread:</h1>
-      <img src="pics/bread1.jpg" id='next1-btn' style="width:200px;height:200px">
-      <img src="pics/bread2.jpg" style="width:200px;height:200px">
-      <img src="pics/bread3.jpg" style="width:200px;height:200px">
-      <img src="pics/bread4.jpg" style="width:200px;height:200px">
-      <!-- <div id='next1-btn' class="button">Next</div> -->
+      <img src="pics/bread1.jpg" id='next1.1-btn' class='bread' style="width:200px;height:200px">
+      <img src="pics/bread2.jpg" id='next1.2-btn' class='bread' style="width:200px;height:200px">
+      <img src="pics/bread3.jpg" id='next1.3-btn' class='bread' style="width:200px;height:200px">
+      <img src="pics/bread4.jpg" id='next1.4-btn' class='bread' style="width:200px;height:200px">
     </div>
 
     <div id='question2' style="display: none">
       <h1>2. Select your sauce:</h1>
-      <img src="pics/sauce1.jpg" id='next2-btn' style="width:200px;height:200px">
-      <img src="pics/sauce2.jpg" id='next2-btn' style="width:200px;height:200px">
-      <img src="pics/sauce3.jpg" id='next2-btn' style="width:200px;height:200px">
-      <img src="pics/sauce4.jpg" id='next2-btn' style="width:200px;height:200px">
-      <!-- <div id='next2-btn' class="button">Next</div> -->
+      <img src="pics/sauce1.jpg" id='next2.1-btn' class='sauce' style="width:200px;height:200px">
+      <img src="pics/sauce2.jpg" id='next2.2-btn' class='sauce' style="width:200px;height:200px">
+      <img src="pics/sauce3.jpg" id='next2.3-btn' class='sauce' style="width:200px;height:200px">
+      <img src="pics/sauce4.jpg" id='next2.4-btn' class='sauce' style="width:200px;height:200px">
     </div>
 
     <div id='question3' style="display: none">
       <h1>3. Select your toppings:</h1>
-      <img src="pics/toppings1.jpg" style="width:200px;height:200px">
-      <img src="pics/toppings2.jpg" style="width:200px;height:200px">
-      <img src="pics/toppings3.jpg" style="width:200px;height:200px">
-      <img src="pics/toppings4.jpg" style="width:200px;height:200px">
-      <div id='random-btn' class="button">Randomize!</div>
+      <img src="pics/toppings1.jpg" id='next3.1-btn' class='toppings' style="width:200px;height:200px">
+      <img src="pics/toppings2.jpg" id='next3.2-btn' class='toppings' style="width:200px;height:200px">
+      <img src="pics/toppings3.jpg" id='next3.3-btn' class='toppings' style="width:200px;height:200px">
+      <img src="pics/toppings4.jpg" id='next3.4-btn' class='toppings' style="width:200px;height:200px">
+
     </div>
+
+    <div id='random-btn' style="display: none" class="button">Randomize!</div>
 
     <div id='result' style="display: none">
       <h1>We found these movies:</h1>
@@ -48,16 +48,19 @@
         $("#question1").show();
         $("#start-btn").hide();
       })
-      $("#next1-btn").on("click", function(){
+      $(".bread").on("click", function(){
         $("#question2").show();
       })
-      $("#next2-btn").on("click", function(){
+      $(".sauce").on("click", function(){
         $("#question3").show();
+      })
+      $(".toppings").on("click", function(){
+        $("#random-btn").show();
       })
       $("#random-btn").on("click", function(){
         $("#result").show();
         // https://image.tmdb.org/t/p/w400/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg
-        fetch("https://api.themoviedb.org/3/discover/movie?api_key=a86fd5baa6696154f7d8e19d4c5d2689&with_genres=16&sort_by=popularity.desc")
+        fetch("https://api.themoviedb.org/3/discover/movie?api_key=a86fd5baa6696154f7d8e19d4c5d2689&with_genres=18&sort_by=popularity.desc")
           .then(res => res.json())
           .then(res => {
             console.log(res);

@@ -3,10 +3,19 @@ body{
   /* opacity: 0.2; */
 }
 
+
 h1{
-  color: blue;
+  color: RGBA(255, 86, 0, 1);
+  font-family: 'Merriweather', serif;
 }
 
+#start-btn{
+  color: white;
+}
+
+#random-btn{
+  color: white;
+}
 .button {
   background-color: #4CAF50;
   border: none;

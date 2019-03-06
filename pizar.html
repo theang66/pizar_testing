@@ -4,42 +4,131 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="pizar.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
   <body>
+  <!-- <div class = "container">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to Pizar!</h1>
+      <p class="lead">Build your favorite pizza and we'll find you a movie!</p>
+      <hr class="my-4">
+      <a class="btn btn-primary btn-lg" id='start-btn' role="button">Start!</a>
+    </div>
+  </div> -->
+    <!-- <h1>Welcome to Pizar!</h1>
+    <h2>Build your favorite pizza and we'll find you a movie!</h2> -->
+    <!-- <div id='start-btn' class="button">Start!</div> -->
+    <div class = "container  mt-4">
+      <a class="btn btn-primary btn-block" id='start-btn' role="button">Start!</a>
+    </div>
 
-    <h1>Welcome to Pizar!</h1>
-    <h2>Build your favorite pizza and we'll find you a movie!</h2>
-    <div id='start-btn' class="button">Start!</div>
-
+    <div class="container mt-4">
     <div id='question1' style="display: none">
       <h1>1. Select your bread:</h1>
-      <img src="pics/bread1.jpg" id='next1.1-btn' class='bread' style="width:200px;height:200px">
-      <img src="pics/bread2.jpg" id='next1.2-btn' class='bread' style="width:200px;height:200px">
-      <img src="pics/bread3.jpg" id='next1.3-btn' class='bread' style="width:200px;height:200px">
-      <img src="pics/bread4.jpg" id='next1.4-btn' class='bread' style="width:200px;height:200px">
+      <div class = "row">
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				         <img src="pics/bread1.jpg" id='next1.1-btn' class='bread' style="width:200px;height:200px">
+			     </div>
+		    </div>
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				         <img src="pics/bread2.jpg" id='next1.2-btn' class='bread' style="width:200px;height:200px">
+			     </div>
+		    </div>
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				         <img src="pics/bread3.jpg" id='next1.3-btn' class='bread' style="width:200px;height:200px">
+			     </div>
+		    </div>
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				         <img src="pics/bread4.jpg" id='next1.4-btn' class='bread' style="width:200px;height:200px">
+			     </div>
+		    </div>
+      </div>
+      <!-- <img src="pics/bread1.jpg" id='next1.1-btn' class='bread' style="width:200px;height:200px" class="img-thumbnail" class="rounded">
+      <img src="pics/bread2.jpg" id='next1.2-btn' class='bread' style="width:200px;height:200px" class="img-thumbnail">
+      <img src="pics/bread3.jpg" id='next1.3-btn' class='bread' style="width:200px;height:200px" class="img-thumbnail">
+      <img src="pics/bread4.jpg" id='next1.4-btn' class='bread' style="width:200px;height:200px" class="img-thumbnail"> -->
+    </div>
     </div>
 
+    <div class="container mt-4">
     <div id='question2' style="display: none">
       <h1>2. Select your sauce:</h1>
-      <img src="pics/sauce1.jpg" id='next2.1-btn' class='sauce' style="width:200px;height:200px">
+      <div class = "row">
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				        <img src="pics/sauce1.jpg" id='next2.1-btn' class='sauce' style="width:200px;height:200px">
+			     </div>
+		    </div>
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				        <img src="pics/sauce2.jpg" id='next2.2-btn' class='sauce' style="width:200px;height:200px">
+			     </div>
+		    </div>
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				         <img src="pics/sauce3.jpg" id='next2.3-btn' class='sauce' style="width:200px;height:200px">
+			     </div>
+		    </div>
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				         <img src="pics/sauce4.jpg" id='next2.4-btn' class='sauce' style="width:200px;height:200px">
+			     </div>
+		    </div>
+      </div>
+      <!-- <img src="pics/sauce1.jpg" id='next2.1-btn' class='sauce' style="width:200px;height:200px">
       <img src="pics/sauce2.jpg" id='next2.2-btn' class='sauce' style="width:200px;height:200px">
       <img src="pics/sauce3.jpg" id='next2.3-btn' class='sauce' style="width:200px;height:200px">
-      <img src="pics/sauce4.jpg" id='next2.4-btn' class='sauce' style="width:200px;height:200px">
+      <img src="pics/sauce4.jpg" id='next2.4-btn' class='sauce' style="width:200px;height:200px"> -->
+    </div>
     </div>
 
+    <div class="container mt-4">
     <div id='question3' style="display: none">
       <h1>3. Select your toppings:</h1>
-      <img src="pics/toppings1.jpg" id='next3.1-btn' class='toppings' style="width:200px;height:200px">
+      <div class = "row">
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				        <img src="pics/toppings1.jpg" id='next3.1-btn' class='toppings' style="width:200px;height:200px">
+			     </div>
+		    </div>
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				        <img src="pics/toppings2.jpg" id='next3.2-btn' class='toppings' style="width:200px;height:200px">
+			     </div>
+		    </div>
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				         <img src="pics/toppings3.jpg" id='next3.3-btn' class='toppings' style="width:200px;height:200px">
+			     </div>
+		    </div>
+        <div class="col-md-3 col-sm-6">
+			     <div class="thumbnail">
+				         <img src="pics/toppings4.jpg" id='next3.4-btn' class='toppings' style="width:200px;height:200px">
+			     </div>
+		    </div>
+      </div>
+      <!-- <img src="pics/toppings1.jpg" id='next3.1-btn' class='toppings' style="width:200px;height:200px">
       <img src="pics/toppings2.jpg" id='next3.2-btn' class='toppings' style="width:200px;height:200px">
       <img src="pics/toppings3.jpg" id='next3.3-btn' class='toppings' style="width:200px;height:200px">
-      <img src="pics/toppings4.jpg" id='next3.4-btn' class='toppings' style="width:200px;height:200px">
-
+      <img src="pics/toppings4.jpg" id='next3.4-btn' class='toppings' style="width:200px;height:200px"> -->
+    </div>
     </div>
 
-    <div id='random-btn' style="display: none" class="button">Randomize!</div>
+    <!-- <div id='random-btn' style="display: none" class="button">Randomize!</div> -->
+    <div class = "container mt-4">
+      <a class="btn btn-success btn-block" id='random-btn' role="button" style="display: none">Find!</a>
+    </div>
 
-    <div id='result' style="display: none">
+    <div id='result' style="display: none" class = "container mt-4">
       <h1>"Everybody likes pepperoni!"</h1>
     </div>
 

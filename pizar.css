@@ -1,5 +1,6 @@
 body{
-  background-image: url("pics/background.jpg");
+  background: url("pics/faded_pizza_slices.png");
+  /* opacity: 0.2; */
 }
 
 h1{
